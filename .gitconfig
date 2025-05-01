@@ -1,19 +1,52 @@
 [user]
-	name = Elisheba Anderson
-	email = leighw33@gmail.com
+    name = Elisheba Wiggins
+    email = leighwcleqr
+
 [alias]
-	st = status
-	cm = commit -m
-	co = checkout
-	br = branch
-	last = log -1 HEAD
-	quick = !git add . && git commit -m \"quick update\" && git push
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -1 HEAD
+    unstage = reset HEAD --
+    amend = commit --amend
+    amend-all = commit --amend --all
+    undo = reset --soft HEAD~1
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit
+    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[core]
+    editor = code -w
+    autocrlf = input
+    safecrlf = true
+    quotepath = false
+    whitespace = trailing-space,space-before-tab,indent-with-non-tab
+
 [init]
-	defaultBranch = main
-[pull]
-	rebase = true
+    defaultBranch = main
+
+[push]
+    default = simple
+
+[merge]
+    tool = vscode
+    conflictstyle = diff3
+
+[diff]
+    tool = vscode
+    guitool = vscode
+    renames = true
+
+[credential]
+    helper = osxkeychain
+
+[log]
+    decorate = auto
+    date = relative
+
+[branch]
+    autosetuprebase = always
+
+[advice]
+    statusHints = false
+    pushUnset = false
