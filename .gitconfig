@@ -1,0 +1,19 @@
+[user]
+	name = Elisheba Anderson
+	email = leighw33@gmail.com
+[alias]
+	st = status
+	cm = commit -m
+	co = checkout
+	br = branch
+	last = log -1 HEAD
+	quick = !git add . && git commit -m \"quick update\" && git push
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true

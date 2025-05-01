@@ -1,0 +1,9 @@
+# API Keys - Copy these to your .zshrc.secret
+# export OPENAI_API_KEY='your_key_here'
+# export ASSEMBLYAI_API_KEY='your_key_here'
+# export SERPER_API_KEY='your_key_here'
+# export OLLAMA_BASE_URL="http://localhost:11434"
+# export OLLAMA_MODEL="ollama/codellama" 
+
+# Source sensitive settings
+[[ -f ~/.zshrc.secret ]] && source ~/.zshrc.secret
