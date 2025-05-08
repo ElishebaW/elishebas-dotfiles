@@ -35,7 +35,7 @@ open_time() {
 
 open_weekly_plan() {
     if command -v open >/dev/null 2>&1; then
-        open -a "Google Chrome" "https://docs.google.com/spreadsheets/d/1M2qFj22kWwOkWTXAaFFEgAm8Ls1LxEGSo7-bHtRu5ic/edit?gid=1876686893#gid=1876686893"  # For macOS
+        open -a "Google Chrome" "$WEEKLY_PLAN_URL"
     else
         echo "Chrome not found. Please install Google Chrome."
     fi
@@ -55,8 +55,4 @@ start_day() {
     open_time
     open_weekly_plan
     open_pomodoro
-}
-
-open_pomodoro_ai () {
-    cd CascadeProjects/pomodoro-ai/pomodoro-ai || exit
 }
